@@ -1,0 +1,353 @@
+*{
+    margin: 0px;
+    margin-top:0px;
+    padding:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    color:white;
+    background: #080808;
+    
+}
+#header
+{
+    width:100%;
+    height:100vh;    
+    background-size:cover;
+    background-image:url(images/17973908.jpg);
+    background-position:center;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+ display: flex;
+ justify-content:right;
+ align-items: center;
+ flex-wrap: wrap;
+ margin-top: 30px;
+}
+
+.logo{
+    width: 150px;
+}
+
+nav ul li{
+   display: inline-block;
+   list-style: none;
+   margin: 10px 20px;
+}
+nav ul li a{
+    color:darkblue;
+    text-decoration:none;
+    font-size:18px;
+    position: relative;
+
+}
+nav ul li a::after{
+    background:red;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    content:'';
+    height:3px;
+    width:0;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.header-text p{
+    display: flex;
+}
+.header-text
+{
+    margin-top:20%;
+    font-size:30px;
+    /* align-items:center; */
+    justify-content: center;
+}
+.header-text h1
+{
+    font-size:70px;
+    margin-top:20px;
+    color: black;
+}
+.header-text h1 span{
+    color:blue;
+}
+#hello{
+    margin-left:450px;
+    color:black;
+}
+
+.sidemenu{
+    padding-left:40px;
+}
+
+/*----------about------------*/
+#about{
+    padding:80px 0;
+    color: #ababab;
+}
+.row{
+    display:flex ;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1
+{
+    flex-basis:35%;
+}
+.about-col-1 img
+{
+    width:100%;
+    border-radius:15px;
+}
+.about-col-2
+{
+flex-basis:60%;
+}
+.subtitle{
+    color:whitesmoke;
+    font-size:60px;
+    font-weight: 600;
+}
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right:50px;
+    position: relative;
+    font-size:18px;
+    font-weight:500;
+    cursor: pointer;
+}
+.tab-links.active-link::after{
+    background:red;
+    position: absolute;
+    height:3px;
+    width: 100px;
+    content:'';
+    transition:0.5s;
+    bottom: -8px;
+    left: 0;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents ul li span{
+    color:rgb(101, 176, 176);
+    font-size:15px;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display:block;
+}
+/*---------------------------------------------------services-------------------------------------------------------------------------*/
+#services{
+    padding: 30px 0;
+}
+.services-list
+{
+    display:flex;
+    grid-template-columns: repeat(auto-fit,minimax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+    color:white;
+}
+.service-sub{
+    color: rgb(0, 47, 255);
+
+}
+.services-list div{
+    background:#262626;
+    padding: 40px;
+    font-size:15px;
+    font-weight: 400;
+    border-radius:10px;
+    transition: 0.5s;
+}
+.services-list i{
+    font-size:60px;
+    margin-bottom:20px;
+}
+.services-list h2{
+    font-size:30px;
+    font-weight:500;
+    margin-bottom:10px;
+}
+.services-list div a{
+    font-size:20px;
+    text-decoration:none;
+    margin-top:20px;
+    display: inline-block;
+    color:white;
+}
+.services-list div:hover{
+    background:pink;
+    transform:translateY(-10px);
+
+}
+/*-----------------------------------------------portfolio-------------------------------------------------------------*/
+#portfolio
+{
+  padding:60px 0;
+}
+.work-list{
+    display:flex;
+    grid-template-columns: repeat(auto-fit,minimax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+    color:white;
+}
+.work{
+    border-radius:10px;
+    position: relative;
+    overflow: hidden;
+
+}
+.work img{
+    width: 100%;
+    border-radius:10px;
+    display: block;
+}
+/*-----------------------------------------------------contact-----------------------------------------------------------*/
+.contact-left
+{
+    flex-basis:35%;
+}
+.contact-right
+{
+    flex-basis:60%;
+}
+
+.contact-left p{
+    margin-top:20px;
+}
+.contact-left p i{
+    color:royalblue;
+    margin-right:10px;
+    font-size:20px;
+
+}
+.contact-left p:hover{
+    color: red;
+}
+.social-icons
+{
+    margin-top:20px;
+
+}
+.social-icons a{
+    display: inline-block;
+    color:white;
+    margin-top: 10px;
+    transition:0.5s;
+    margin-right:15px;
+    font-size:25px;
+    text-decoration: none;
+}
+.social-icons a :hover{
+    color: blue;
+    transform:translateY(-5px);
+
+}
+.btn.btn2{
+    display:inline-block;
+    background:rgb(58, 81, 230);
+    text-decoration: none;
+    margin-top:20px;
+}
+.contact-right form{
+    width:100%;
+}
+form input,form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background:#262626;
+    padding: 15px;
+    margin:15px 0;
+    color:white;
+    font-size:20px;
+    border-radius:8px;
+}
+form a .btn.btn2{
+    padding: 15px 60px;
+    font-size:20px;
+    margin-top: 20px;
+    cursor:pointer;
+}
+/*------------------------------css for small screens----------------*/
+nav.fa{
+    display:none;
+}
+
+
+
+
+
+
+@media only screen and (max-width:600px)
+{
+    #header{
+        background-image: url(images/UNO\ ebike\ concept.jpg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 15px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa{
+    display:block;
+    font-size:25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top:0;
+        right:-200px;
+        width: 200px;
+        height: 100vh;
+        padding:50px;
+        transition: 0.5s;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin:25px;
+    }
+
+nav ul.fa{
+    position:absolute;
+    top:25px;
+    right:25px;
+    cursor: pointer;
+}    
+}
